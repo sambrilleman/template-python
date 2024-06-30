@@ -1,8 +1,11 @@
 _default:
   @just --list
 
+test:
+    poetry run pytest
+
 black:
     poetry run black .
 
-test:
-    poetry run pytest
+mypy:
+    poetry run mypy .
