@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "<project-name>"
+version = "0.0.0"
+description = "<project-description>"
+packages = [
+    {include = "<package-name>"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+mypy = ">=1.0"
+pytest = ">=8.0"
+pytest-check = ">=2.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = []
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
