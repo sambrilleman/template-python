@@ -6,4 +6,4 @@ RUN wget https://github.com/casey/just/releases/download/${JUST_VERSION}/just-${
 
 # install poetry
 ENV POETRY_VERSION=1.8.3
-RUN curl -sSL https://install.python-poetry.org | python3 - --version ${POETRY_VERSION}
+RUN python3 -m pip install poetry==${POETRY_VERSION}
